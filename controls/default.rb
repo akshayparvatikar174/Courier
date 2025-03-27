@@ -1,16 +1,13 @@
-control 'check-test-file-present' do
-  title 'Ensure the test.txt file exists'
-  desc 'Check if the /home/polyfil/sandbox.html file exists on the system'
+control 'check_files_existence' do
+  impact 1.0
+  title 'Verify that required files exist'
+  desc 'Ensure that sandbox.html and akshay.html are present in /home/polyfil/'
 
-  # Path to the file you want to check
-  file_path = '/home/polyfil/sandbox.html'
-  file_path1 = '/home/polyfil/akshay.html'
-
-  describe file(file_path) do
-    it { should exist }  # This checks if the file exists at the specified path
+  describe file('/home/polyfil/sandbox.html') do
+    it { should exist }
   end
 
-  describe file(file_path1) do
-    it { should exist }  # This checks if the file exists at the specified path
+  describe file('/home/polyfil/akshay.html') do
+    it { should exist }
   end
-end 
+end
