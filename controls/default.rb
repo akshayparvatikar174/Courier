@@ -4,6 +4,7 @@ control 'check-test-file-present' do
 
   # Path to the file you want to check
   file_path = '/home/polyfil/sandbox.html'
+  file_path1 = '/home/polyfil/sandbox.html'
 
   describe file(file_path) do
     it { should exist }  # This checks if the file exists at the specified path
@@ -15,9 +16,9 @@ control 'check-test-file-present' do
   desc 'Check if the /home/polyfil/akshay.html file exists on the system'
 
   # Path to the file you want to check
-  file_path = '/home/polyfil/akshay.html'
+  file_path1 = '/home/polyfil/akshay.html'
 
-  describe file(file_path) do
+  describe file(file_path1) do
     it { should exist }  # This checks if the file exists at the specified path
   end
 end
