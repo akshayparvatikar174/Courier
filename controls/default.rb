@@ -11,8 +11,8 @@ control 'check-test-file-present' do
 end
 
 control 'check-test-file-present' do
-  title 'Ensure the test.txt file exists'
-  desc 'Check if the /home/polyfil/sandbox.html file exists on the system'
+  title 'Ensure the akshay.html file exists'
+  desc 'Check if the /home/polyfil/akshay.html file exists on the system'
 
   # Path to the file you want to check
   file_path = '/home/polyfil/akshay.html'
